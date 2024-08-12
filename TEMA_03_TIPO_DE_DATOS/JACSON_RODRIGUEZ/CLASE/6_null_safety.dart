@@ -65,6 +65,6 @@ void main() {
 
   /// Forzar y decirle oye yo se que es nulo pero yo lo controle
   /// !
-  print(clasesDeNavidad!.length); //(Null check operator used a null value)
+  //print(clasesDeNavidad!.length); //(Null check operator used a null value)
 
 }
