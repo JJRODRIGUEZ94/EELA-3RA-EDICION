@@ -55,7 +55,16 @@ void main() {
     "dias ":["lunes", null, "Martes"],
     "navidades" : null,
     "otros_dias" :{
-      "navidades": null,
+      "carnavales": "Vacacion",
     },
   };
+
+  print(mapaDeEjemplo);
+
+  print(mapaDeEjemplo["otros_diass"]?["carnavales"]?? "No");   // Creación de modelos de datos
+
+  /// Forzar y decirle oye yo se que es nulo pero yo lo controle
+  /// !
+  print(clasesDeNavidad!.length); //(Null check operator used a null value)
+
 }
