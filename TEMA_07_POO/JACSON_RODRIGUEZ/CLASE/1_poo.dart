@@ -64,5 +64,11 @@ class Animal {
       "Genero": this.genero,
     }.toString();
   }
+
+  // copyWith 
+  // toMap
+  // toJson
+  // FromMap
+  
   /// Getters y Setters
 }
