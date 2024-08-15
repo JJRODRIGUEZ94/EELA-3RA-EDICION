@@ -1,74 +1,35 @@
+import '1_1_animal.dart';
+
 void main() {
   /// Crear objetos
   /// 1. Perro
   /// 2. Gato
   /// 3. Elefante
-  final perro = Animal(edad: 12, genero: "Macho", color: "Blanco",tipoDeComida: "papa");
+  final perro = Animal("Rex",
+      edad: 12, genero: "Macho", color: "Blanco", tipoDeComida: "papa");
 
-  final gato = Animal(edad: 10, genero: "Hembra", color: "Amarillos",tipoDeComida: "Pescado");
+  final gato = Animal("Pancho",
+      edad: 10, genero: "Hembra", color: "Amarillos", tipoDeComida: "Pescado");
 
-  final elefante = Animal(edad: 4, genero: "Macho", color: "Gris", tipoDeComida: "Hierba");
+  final elefante = Animal("Bula",
+      edad: 4, genero: "Macho", color: "Gris", tipoDeComida: "Hierba");
 
   print(perro.color);
 
-  final mono = Animal(edad:4, genero: "Macho", color: "Rojo", tipoDeComida: "Frutas");
+  final mono = Animal("Chango",
+      edad: 4, genero: "Macho", color: "Rojo", tipoDeComida: "Frutas");
 
   print(mono.sumar(12, 40));
   print(mono.toString());
+  print(mono.nombreMayuscula);
+  print(mono.tipoDeComidaMinuscula);
+  print(mono.edad);
+  mono.cumple = 32;
+  print(mono.edad);
 }
+
+
 
 // Crear clase
 // class --> palabra reservada
 // Nombre de la clase --> PascalCase  --> Primera letra mayuscula
-
-class Animal {
-  /// Atributos
-  /// Argumentos dentro de la clase
-  ///
-  /// 1. Mutable
-  int edad;
-
-  /// 2. Inmutable s
-  final String genero;
-  final String color;
-  final String tipoDeComida;
-
-  /// Constructor
-  /// Define con el nombre de la clase y seguido por los atributos
-  Animal({
-    required this.edad,
-    required this.genero,
-    required this.color,
-    required this.tipoDeComida,
-  });
-
-  /// Metodos o funciones
-
-  void caminar() {
-    print("Esta caminando");
-  }
-
-  void comer() {
-    print("Esta comiendo");
-  }
-  
-  int sumar (int valor1 , int valor2){
-    return valor1+valor2;
-  }
-
-  /// override --> sobrescritur
-  @override
-  String toString(){
-    return {
-      "Edad ": this.edad,
-      "Genero": this.genero,
-    }.toString();
-  }
-
-  // copyWith 
-  // toMap
-  // toJson
-  // FromMap
-  
-  /// Getters y Setters
-}
